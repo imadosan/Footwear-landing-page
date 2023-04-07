@@ -285,6 +285,12 @@ p {
   transform: translateY(-50%);
 }
 
+.services__tab--active {
+  transform: translateY(-66%);
+  background-color: var(--clr-red);
+  color: #fff;
+}
+
 .services__tab span {
   margin-right: 1rem;
   font-weight: 600;

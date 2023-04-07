@@ -13,7 +13,7 @@ const nav = document.querySelector('.nav');
 const navLinks = document.querySelector('.nav__links');
 const tabs = document.querySelectorAll('.services__tab');
 const tabsContainer = document.querySelector('.services__tab-container');
-const tabsContent = document.querySelectorAll('services__content');
+const tabsContent = document.querySelectorAll('.services__content');
 
 // Modal Window
 const openModal = (e) => {
@@ -122,3 +122,24 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 
 imgTarget.forEach((img) => imgObserver.observe(img));
+
+// Tabbed component
+tabsContainer.addEventListener('click', (e) => {
+  const clicked = e.target.closest('.services__tab');
+
+  // Gaurd clause
+  if (!clicked) return;
+
+  // Remove active classes
+  tabs.forEach((t) => t.classList.remove('services__tab--active'));
+  tabsContent.forEach((c) => c.classList.remove('services__content--active'));
+
+  // Active tab
+  clicked.classList.add('services__tab--active');
+
+  // Active content area
+  document
+    .querySelector(`.services__content--${clicked.dataset.tab}`)
+    //               services__content--2
+    .classList.add('services__content--active');
+});
