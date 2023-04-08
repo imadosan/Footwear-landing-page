@@ -286,7 +286,6 @@ p {
 }
 
 .services__tab--active {
-  transform: translateY(-66%);
   background-color: var(--clr-red);
   color: #fff;
 }
@@ -323,7 +322,7 @@ p {
   width: 30%;
 }
 
-.services__icon svg {
+.services__icon img {
   width: 100%;
 }
 
