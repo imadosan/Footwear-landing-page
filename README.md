@@ -8,7 +8,7 @@
 
 </div>
 
-![ScreenShot](images/screenshot.png)
+![Alt text](images/screenshot.png)
 
 This is a responsive static landing page for a footwear brand.
 
